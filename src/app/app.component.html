@@ -1,2 +1,16 @@
+<div [ngClass]="themeClass">
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+       <span>BitFumes   </span> 
+       <button mat-raised-button color="accent"[matMenuTriggerFor]="appMenu" >Themes</button>
+    </mat-toolbar-row>
+</mat-toolbar>
+<mat-menu #appMenu="matMenu">
+    <button mat-menu-item (click)="changeTheme('')">Default</button>
+    <button mat-menu-item (click)="changeTheme('theme')">New</button>
+  </mat-menu>
+
+
 <app-dialog></app-dialog>
 <app-test-dialog></app-test-dialog>
+</div>

@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'app';
+  themeClass= localStorage.getItem('applicationTheme');
+  changeTheme(theme){
+  this.themeClass = theme;
+  localStorage.setItem('applicationTheme',this.themeClass);
+  }
 }
+
