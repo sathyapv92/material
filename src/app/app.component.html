@@ -10,7 +10,40 @@
     <button mat-menu-item (click)="changeTheme('theme')">New</button>
   </mat-menu>
 
-
+  <mat-form-field class="example-full-width">
+    <input matInput [matDatepickerFilter]="myFilter" [matDatepicker]="picker" placeholder="Choose a date">
+    <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-datepicker #picker></mat-datepicker>
+  </mat-form-field>
 <app-dialog></app-dialog>
 <app-test-dialog></app-test-dialog>
 </div>
+
+<script>
+
+ 
+    
+  
+    
+    function checkWin() {
+        if (!myWindow) {
+            document.getElementById("msg").innerHTML = "'myWindow' has never been opened!";
+        } else {
+            if (myWindow.closed) { 
+                document.getElementById("msg").innerHTML = "'myWindow' has been closed!";
+            } else {
+                document.getElementById("msg").innerHTML = "'myWindow' has not been closed!";
+            }
+        }
+    }
+    
+    </script>
+   
+ 
+    
+    <button (click)="openWin()">Open "myWindow"</button>
+    <button (click)="closeWin()">Close "myWindow"</button>
+    <br><br>
+    <button onclick="checkWin()">Has "myWindow" been closed?</button>
+    <br><br>
+    <div id="msg"></div>

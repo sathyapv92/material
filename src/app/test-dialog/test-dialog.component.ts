@@ -18,8 +18,8 @@ export class TestDialogComponent implements OnInit {
 
   openDialog(): void {
     let dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      width: '1001px',
-       height: '800px',
+      panelClass: 'my-full-screen-dialog',
+       
       data: { name: this.name, animal: this.animal }
     });
 

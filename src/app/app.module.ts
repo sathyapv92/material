@@ -2,7 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
-import { AppComponent } from './app.component';
+import { AppComponent, DatepickerFilterExample } from './app.component';
 import { DialogComponent, DialogContentExampleDialog } from './dialog/dialog.component';
 
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
@@ -18,7 +18,8 @@ import { DealEntryComponent } from './deal-entry/deal-entry.component';
     DialogContentExampleDialog,
     TestDialogComponent,
     DialogOverviewExampleDialog,
-    DealEntryComponent
+    DealEntryComponent,
+    DatepickerFilterExample
   ],
   imports: [
     BrowserModule,
