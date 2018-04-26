@@ -8,6 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app';
    myWindow ;
+   panelOpenState: boolean = false;
  
   themeClass= localStorage.getItem('applicationTheme');
   changeTheme(theme){
