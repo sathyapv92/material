@@ -9,6 +9,10 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TestDialogComponent, DialogOverviewExampleDialog } from './test-dialog/test-dialog.component';
 import { MyOwnCustomMaterialModule } from './test-dialog/material-module';
 import { DealEntryComponent } from './deal-entry/deal-entry.component';
+import { PostsComponent } from './posts/posts.component';
+import { DataService } from './services/data.service';
+import { PostService } from './services/post.service';
+import { HttpModule } from '@angular/http';
 
 
 @NgModule({
@@ -19,14 +23,16 @@ import { DealEntryComponent } from './deal-entry/deal-entry.component';
     TestDialogComponent,
     DialogOverviewExampleDialog,
     DealEntryComponent,
-    DatepickerFilterExample
+    DatepickerFilterExample,
+    PostsComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MyOwnCustomMaterialModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpModule
    
     
    
@@ -36,7 +42,7 @@ import { DealEntryComponent } from './deal-entry/deal-entry.component';
    
   ],
   entryComponents: [DialogComponent, DialogContentExampleDialog,TestDialogComponent,DialogOverviewExampleDialog],
-  providers: [],
+  providers: [PostService,DataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
